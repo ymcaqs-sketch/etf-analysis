@@ -2919,27 +2919,28 @@ navLinks.forEach(a => {
 
 </script>
 
+  
   <!-- Comments Section -->
   <div style="max-width:1100px;margin:0 auto 40px;padding:0 24px">
     <div style="background:#fff;border-radius:12px;padding:28px;box-shadow:0 1px 4px rgba(0,0,0,0.06)">
-      <h2 style="font-size:18px;font-weight:700;color:#1e293b;margin-bottom:6px">💬 댓글 · 의견 남기기</h2>
-      <p style="font-size:13px;color:#64748b;margin-bottom:20px">GitHub 계정으로 로그인하면 댓글과 반응(이모지)을 남길 수 있습니다.</p>
-      <script src="https://giscus.app/client.js"
-              data-repo="ymcaqs-sketch/etf-analysis"
-              data-repo-id="R_kgDOSAWQCQ"
-              data-category="General"
-              data-category-id="DIC_kwDOSAWQCc4C6qD6"
-              data-mapping="pathname"
-              data-strict="0"
-              data-reactions-enabled="1"
-              data-emit-metadata="0"
-              data-input-position="bottom"
-              data-theme="light"
-              data-lang="ko"
-              crossorigin="anonymous"
-              async>
+      <h2 style="font-size:18px;font-weight:700;color:#1e293b;margin-bottom:6px">&#128172; 댓글 &#183; 의견 남기기</h2>
+      <p style="font-size:13px;color:#64748b;margin-bottom:20px">Google &#183; Facebook &#183; Twitter 계정으로 로그인해서 댓글을 남길 수 있습니다.</p>
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https://ymcaqs-sketch.github.io/etf-analysis/';
+          this.page.identifier = 'etf-analysis-main';
+        };
+        (function() {
+          var d = document, s = d.createElement('script');
+          s.src = 'https://rake-1.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
       </script>
+      <noscript>댓글을 보려면 JavaScript를 활성화하세요. <a href="https://disqus.com/?ref_noscript">Disqus로 제공되는 댓글</a></noscript>
     </div>
   </div>
+
 </body>
 </html>

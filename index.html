@@ -4096,17 +4096,23 @@ function downloadExcel(tid, filename) {
   var ths = tbl.querySelectorAll('thead th');
   ths.forEach(function(th) { headers.push(th.innerText.trim()); });
 
+  // 문자열 강제 컬럼 인덱스 (종목코드=0, 종목명=1, 분류체계=2, 운용사=3, 복제방법=4, 상장일=11)
+  var textCols = {0:1, 1:1, 2:1, 3:1, 4:1, 11:1};
+
   // 데이터 수집 (숨겨진 행 제외)
   var data = [headers];
   var rows = tbl.querySelectorAll('tbody tr');
   rows.forEach(function(tr) {
     if (tr.style.display === 'none') return;
     var row = [];
-    tr.querySelectorAll('td').forEach(function(td) {
+    tr.querySelectorAll('td').forEach(function(td, colIdx) {
       var txt = td.innerText.trim();
-      // 숫자 변환 시도 (%, 억 제거)
-      var num = txt.replace('%','').replace('억','').replace(',','').replace('+','');
-      var parsed = parseFloat(num);
+      // 문자열 강제 컬럼은 숫자 변환 안 함
+      if (textCols[colIdx]) { row.push(txt); return; }
+      // 숫자형 컬럼: %, 억, 콤마, + 제거 후 순수 숫자만 변환
+      var num = txt.replace('%','').replace('억','').replace(/,/g,'').replace('+','');
+      // 알파벳·한글 포함되거나 선행 0 있으면 문자열 유지
+      var parsed = /^[+-]?\d+(\.\d+)?$/.test(num) ? parseFloat(num) : NaN;
       row.push(isNaN(parsed) || txt === '-' ? txt : parsed);
     });
     data.push(row);

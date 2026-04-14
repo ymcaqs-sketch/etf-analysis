@@ -231,11 +231,67 @@ a { text-decoration: none; color: inherit; }
   .sidebar { position:fixed; left:0; top: var(--header-h); transform:translateX(-100%);
              height: calc(100vh - var(--header-h)); }
   .sidebar.open { transform:translateX(0); }
-  .main-content { padding:12px; }
+  .main-content { padding:10px; }
   .fd-content { grid-template-columns:1fr; }
   .charts-row { grid-template-columns:1fr; }
   .grid-3 { grid-template-columns:repeat(2,1fr); }
   .header-sub { display:none; }
+
+  /* 섹션 여백 축소 */
+  .cat-section { padding:14px 12px; border-radius:8px; margin-bottom:14px; }
+  .sec-header { padding:10px 12px; gap:10px; margin-bottom:14px; }
+  .sec-icon { font-size:24px; }
+  .sec-title { font-size:16px; }
+  .sec-desc { font-size:12px; }
+  .sub-sec { margin-bottom:16px; padding-bottom:16px; }
+  .sub-title { font-size:14px; margin-bottom:8px; }
+
+  /* 탭 버튼 */
+  .tab-btn { padding:5px 10px; font-size:11px; }
+
+  /* 기술통계 테이블 */
+  .stbl { font-size:11px; }
+  .stbl th, .stbl td { padding:5px 6px; }
+
+  /* 상관분석 bar */
+  .bar-wrap { width:70px; }
+
+  /* 회귀 요약 */
+  .mreg-summary { gap:10px; padding:10px 12px; }
+  .mreg-stat { font-size:12px; }
+
+  /* t검정 */
+  .ttest-g { padding:10px 12px; min-width:100px; }
+  .tg-mean { font-size:18px; }
+
+  /* 개요 카드 */
+  .overview-card { padding:12px; }
+  .ov-val { font-size:17px; }
+
+  /* 로우 데이터 툴바 */
+  .raw-toolbar { flex-wrap:wrap; gap:.4rem; padding:.5rem .8rem; }
+  .raw-search { width:100%; max-width:100%; }
+  .raw-dl-btn { margin-left:0; width:100%; text-align:center; }
+  .raw-header { padding:.7rem 1rem; }
+  .raw-title { font-size:.88rem; }
+
+  /* 로우 테이블 폰트 */
+  table[id^="tbl_"] { font-size:.75rem; }
+  table[id^="tbl_"] td,
+  table[id^="tbl_"] th { padding:5px 6px; }
+  table[id^="tbl_"] td:nth-child(2) { max-width:140px; }
+  table[id^="tbl_"] td:nth-child(3) { max-width:100px; }
+
+  /* 상자 수염 그림 */
+  .bp-wrap { padding:8px 8px 2px; }
+  .bp-label { font-size:10px; }
+
+  /* 가이드 카드 */
+  .guide-grid { grid-template-columns:1fr; }
+  .guide-card { padding:14px; }
+
+  /* key finding */
+  .key-finding { font-size:12px; line-height:1.6; }
 }
 @media (min-width: 769px) {
   .menu-btn { display:none; }

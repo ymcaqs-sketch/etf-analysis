@@ -24,34 +24,38 @@ if errorlevel 1 (
     pause & exit /b 1
 )
 
-:: dev/index.html → index.html 복사
-echo [1/4] dev/index.html → index.html 복사 중...
-copy /y dev\index.html index.html >nul
-echo       완료
+:: main으로 전환
+echo [1/4] main 브랜치로 전환...
+git checkout main
 
-:: prod 커밋 (dev 브랜치에서)
-echo [2/4] prod 파일 커밋...
+:: dev/index.html → main 반영 (GitHub Pages /dev/ 경로 유지)
+echo [2/4] dev/index.html → main 동기화...
+git checkout dev -- dev/
+git add dev/index.html
+
+:: dev/index.html → index.html (프로덕션 루트)
+echo [3/4] index.html 업데이트 (프로덕션)...
+copy /y dev\index.html index.html >nul
 git add index.html
+
+:: 커밋 + push
 git diff --cached --quiet
 if errorlevel 1 (
     git commit -m "deploy: promote dev to prod"
-    git push origin dev
+) else (
+    echo     변경사항 없음, 커밋 스킵
 )
 
-:: main에 머지
-echo [3/4] main 브랜치 머지...
-git checkout main
-git merge dev --no-edit
+echo [4/4] GitHub Pages 배포...
 git push origin main
 
 :: dev로 복귀
-echo [4/4] dev 브랜치 복귀...
 git checkout dev
 
 echo.
-echo ✅ 배포 완료!
-echo    DEV  → https://ymcaqs-sketch.github.io/etf-analysis/dev/
-echo    PROD → https://ymcaqs-sketch.github.io/etf-analysis/
+echo 배포 완료!
+echo    DEV  -^> https://ymcaqs-sketch.github.io/etf-analysis/dev/
+echo    PROD -^> https://ymcaqs-sketch.github.io/etf-analysis/
 echo    (GitHub Pages 반영까지 1~2분 소요)
 echo.
 pause

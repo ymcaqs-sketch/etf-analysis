@@ -475,7 +475,6 @@ Q1=37.62%, Q3=146.81% → 전체의 50%가 <strong>37.62%~146.81%</strong> 사�
 비교적 대칭적 분포를 보입니다.</div>
 </div>
 <canvas id="hist_주식" height="120" class="chart-c"></canvas>
-<canvas id="box_주식" height="70" class="chart-c" style="margin-top:6px;display:block;width:100%"></canvas>
 </div></div>
 <div id="corr_주식_tab" class="tab-panel"><div class="sub-sec">
 <h3 class="sub-title">2. 상관분석 (피어슨 r)</h3>
@@ -1514,7 +1513,6 @@ Q1=1.0%, Q3=4.95% → 전체의 50%가 <strong>1.0%~4.95%</strong> 사이에 분
 오른쪽 꼬리 분포로 인해 소수의 고수익 ETF가 대표값을 왜곡합니다.</div>
 </div>
 <canvas id="hist_채권" height="120" class="chart-c"></canvas>
-<canvas id="box_채권" height="70" class="chart-c" style="margin-top:6px;display:block;width:100%"></canvas>
 </div></div>
 <div id="corr_채권_tab" class="tab-panel"><div class="sub-sec">
 <h3 class="sub-title">2. 상관분석 (피어슨 r)</h3>
@@ -2053,7 +2051,6 @@ Q1=12.92%, Q3=30.62% → 전체의 50%가 <strong>12.92%~30.62%</strong> 사이�
 오른쪽 꼬리 분포로 인해 소수의 고수익 ETF가 대표값을 왜곡합니다.</div>
 </div>
 <canvas id="hist_혼합자산" height="120" class="chart-c"></canvas>
-<canvas id="box_혼합자산" height="70" class="chart-c" style="margin-top:6px;display:block;width:100%"></canvas>
 </div></div>
 <div id="corr_혼합자산_tab" class="tab-panel"><div class="sub-sec">
 <h3 class="sub-title">2. 상관분석 (피어슨 r)</h3>
@@ -2471,7 +2468,6 @@ Q1=13.09%, Q3=19.65% → 전체의 50%가 <strong>13.09%~19.65%</strong> 사이�
 오른쪽 꼬리 분포로 인해 소수의 고수익 ETF가 대표값을 왜곡합니다.</div>
 </div>
 <canvas id="hist_부동산" height="120" class="chart-c"></canvas>
-<canvas id="box_부동산" height="70" class="chart-c" style="margin-top:6px;display:block;width:100%"></canvas>
 </div></div>
 <div id="corr_부동산_tab" class="tab-panel"><div class="sub-sec">
 <h3 class="sub-title">2. 상관분석 (피어슨 r)</h3>
@@ -2736,7 +2732,6 @@ Q1=29.34%, Q3=60.31% → 전체의 50%가 <strong>29.34%~60.31%</strong> 사이�
 비교적 대칭적 분포를 보입니다.</div>
 </div>
 <canvas id="hist_원자재" height="120" class="chart-c"></canvas>
-<canvas id="box_원자재" height="70" class="chart-c" style="margin-top:6px;display:block;width:100%"></canvas>
 </div></div>
 <div id="corr_원자재_tab" class="tab-panel"><div class="sub-sec">
 <h3 class="sub-title">2. 상관분석 (피어슨 r)</h3>
@@ -3058,7 +3053,6 @@ Q1=1.97%, Q3=8.72% → 전체의 50%가 <strong>1.97%~8.72%</strong> 사이에 �
 오른쪽 꼬리 분포로 인해 소수의 고수익 ETF가 대표값을 왜곡합니다.</div>
 </div>
 <canvas id="hist_기타" height="120" class="chart-c"></canvas>
-<canvas id="box_기타" height="70" class="chart-c" style="margin-top:6px;display:block;width:100%"></canvas>
 </div></div>
 <div id="corr_기타_tab" class="tab-panel"><div class="sub-sec">
 <h3 class="sub-title">2. 상관분석 (피어슨 r)</h3>
@@ -3940,7 +3934,7 @@ ln변환 계수 해석: X₂가 1단위 증가(e배 증가) → Y가 β₂만큼
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
-const CD = {"overview": {"cats": ["주식", "채권", "혼합자산", "부동산", "원자재", "기타", "통화"], "ns": [601, 126, 47, 11, 14, 25, 3], "means": [96.45, 3.71, 23.41, 17.21, 50.43, 6.84, 5.4], "colors": ["#3b82f6", "#10b981", "#f59e0b", "#8b5cf6", "#ef4444", "#94a3b8", "#64748b"]}, "hist_주식": {"labels": ["0.5~29.6", "29.6~58.8", "58.8~87.9", "87.9~117.1", "117.1~146.2", "146.2~175.4", "175.4~204.5", "204.5~233.6", "233.6~262.8", "262.8~291.9", "291.9~321.1", "321.1~350.2"], "counts": [112, 137, 83, 56, 59, 51, 65, 7, 6, 14, 8, 3], "color": "#3b82f6"}, "corr_주식": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "rs": [0.0224, 0.2797, 0.2015, -0.0881, 0.0689, 0.2173, 0.0896]}, "r2_주식": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "r2s": [0.0005, 0.0783, 0.0406, 0.0078, 0.0047, 0.0472, 0.008]}, "sub_주식": {"groups": ["주식-시장대표", "주식-전략", "주식-업종섹터", "주식-규모"], "means": [98.54, 82.1, 102.15, 108.93], "stds": [66.96, 61.04, 83.22, 53.3], "ns": [170, 145, 272, 14]}, "hist_채권": {"labels": ["0.0~2.1", "2.1~4.2", "4.2~6.3", "6.3~8.3", "8.3~10.4", "10.4~12.5", "12.5~14.6", "14.6~16.7", "16.7~18.8", "18.8~20.8", "20.8~22.9", "22.9~25.0"], "counts": [69, 20, 17, 8, 3, 2, 0, 3, 2, 0, 0, 2], "color": "#10b981"}, "corr_채권": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "rs": [0.0942, -0.1082, 0.0548, -0.0185, -0.0256, -0.0003, -0.1405]}, "r2_채권": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "r2s": [0.0089, 0.0117, 0.003, 0.0003, 0.0007, 0.0, 0.0197]}, "sub_채권": {"groups": ["채권-혼합", "채권-회사채", "채권-국공채"], "means": [2.59, 2.06, 4.98], "stds": [2.37, 1.89, 5.78], "ns": [38, 24, 64]}, "hist_혼합자산": {"labels": ["1.5~10.6", "10.6~19.7", "19.7~28.7", "28.7~37.8", "37.8~46.9", "46.9~55.9", "55.9~65.0", "65.0~74.1", "74.1~83.1", "83.1~92.2", "92.2~101.3", "101.3~110.3"], "counts": [7, 18, 9, 6, 4, 1, 1, 0, 0, 0, 0, 1], "color": "#f59e0b"}, "corr_혼합자산": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "rs": [0.2403, 0.0371, 0.1362, -0.0526, -0.0384, -0.0637, 0.3605]}, "r2_혼합자산": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "r2s": [0.0577, 0.0014, 0.0185, 0.0028, 0.0015, 0.0041, 0.13]}, "hist_부동산": {"labels": ["8.2~10.7", "10.7~13.2", "13.2~15.7", "15.7~18.1", "18.1~20.6", "20.6~23.1", "23.1~25.6", "25.6~28.1", "28.1~30.6", "30.6~33.0", "33.0~35.5", "35.5~38.0"], "counts": [1, 2, 4, 1, 1, 0, 1, 0, 0, 0, 0, 1], "color": "#8b5cf6"}, "corr_부동산": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "rs": [-0.5872, -0.3829, 0.1622, 0.5909, -0.3294, -0.4193, 0.1527]}, "r2_부동산": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "r2s": [0.3448, 0.1466, 0.0263, 0.3492, 0.1085, 0.1758, 0.0233]}, "hist_원자재": {"labels": ["2.3~12.8", "12.8~23.2", "23.2~33.7", "33.7~44.2", "44.2~54.7", "54.7~65.2", "65.2~75.7", "75.7~86.2", "86.2~96.7", "96.7~107.2", "107.2~117.7", "117.7~128.2"], "counts": [2, 1, 2, 0, 4, 2, 0, 0, 2, 0, 0, 1], "color": "#ef4444"}, "corr_원자재": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "rs": [0.2868, 0.4152, 0.191, -0.1277, 0.5229, 0.6308, 0.0264]}, "r2_원자재": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "r2s": [0.0822, 0.1724, 0.0365, 0.0163, 0.2734, 0.3979, 0.0007]}, "sub_원자재": {"groups": ["원자재-금속", "원자재-농산물"], "means": [55.6, 6.92], "stds": [28.98, 6.43], "ns": [9, 3]}, "hist_기타": {"labels": ["0.0~2.9", "2.9~5.8", "5.8~8.7", "8.7~11.6", "11.6~14.5", "14.5~17.4", "17.4~20.3", "20.3~23.2", "23.2~26.1", "26.1~29.0", "29.0~31.9", "31.9~34.8"], "counts": [13, 5, 0, 2, 2, 0, 1, 0, 0, 0, 1, 1], "color": "#94a3b8"}, "corr_기타": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "rs": [0.9467, -0.3965, 0.3032, 0.1738, -0.0912, -0.2994, 0.3443]}, "r2_기타": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "r2s": [0.8962, 0.1572, 0.092, 0.0302, 0.0083, 0.0896, 0.1186]}, "hist_통화": {"labels": ["2.6~3.3", "3.3~4.0", "4.0~4.7", "4.7~5.3", "5.3~6.0", "6.0~6.7", "6.7~7.4", "7.4~8.0", "8.0~8.7", "8.7~9.4", "9.4~10.1", "10.1~10.8"], "counts": [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], "color": "#64748b"}, "corr_통화": {"xids": [], "rs": []}, "r2_통화": {"xids": [], "r2s": []}, , "box_주식": {"min": 0.46, "q1": 37.62, "median": 78.11, "mean": 96.45, "q3": 146.81, "max": 303.0, "outliers": [311.99, 312.71, 317.83, 318.01, 319.75, 320.94, 326.56, 327.19, 350.24], "n": 601}, "box_채권": {"min": 0.02, "q1": 1.0, "median": 1.85, "mean": 3.71, "q3": 4.95, "max": 10.04, "outliers": [11.46, 11.58, 15.68, 16.53, 16.65, 16.87, 18.46, 23.48, 25.0], "n": 126}, "box_혼합자산": {"min": 1.54, "q1": 12.96, "median": 17.22, "mean": 23.41, "q3": 30.54, "max": 56.27, "outliers": [110.35], "n": 47}, "box_원자재": {"min": 2.26, "q1": 30.42, "median": 47.09, "mean": 50.43, "q3": 59.0, "max": 92.99, "outliers": [128.2], "n": 14}, "box_부동산": {"min": 8.23, "q1": 13.44, "median": 14.71, "mean": 17.21, "q3": 17.94, "max": 23.65, "outliers": [37.99], "n": 11}, "box_기타": {"min": 0.02, "q1": 1.97, "median": 2.64, "mean": 6.84, "q3": 8.72, "max": 13.22, "outliers": [19.87, 29.26, 34.77], "n": 25}, "cross": {"cats": ["주식", "채권", "혼합자산", "부동산", "원자재", "기타", "통화"], "means": [96.45, 3.71, 23.41, 17.21, 50.43, 6.84, 5.4], "stds": [73.6, 4.57, 18.22, 7.94, 35.35, 9.0, 4.63], "colors": ["#3b82f6", "#10b981", "#f59e0b", "#8b5cf6", "#ef4444", "#94a3b8", "#64748b"]}};
+const CD = {"overview": {"cats": ["주식", "채권", "혼합자산", "부동산", "원자재", "기타", "통화"], "ns": [601, 126, 47, 11, 14, 25, 3], "means": [96.45, 3.71, 23.41, 17.21, 50.43, 6.84, 5.4], "colors": ["#3b82f6", "#10b981", "#f59e0b", "#8b5cf6", "#ef4444", "#94a3b8", "#64748b"]}, "hist_주식": {"labels": ["0.5~29.6", "29.6~58.8", "58.8~87.9", "87.9~117.1", "117.1~146.2", "146.2~175.4", "175.4~204.5", "204.5~233.6", "233.6~262.8", "262.8~291.9", "291.9~321.1", "321.1~350.2"], "counts": [112, 137, 83, 56, 59, 51, 65, 7, 6, 14, 8, 3], "color": "#3b82f6"}, "corr_주식": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "rs": [0.0224, 0.2797, 0.2015, -0.0881, 0.0689, 0.2173, 0.0896]}, "r2_주식": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "r2s": [0.0005, 0.0783, 0.0406, 0.0078, 0.0047, 0.0472, 0.008]}, "sub_주식": {"groups": ["주식-시장대표", "주식-전략", "주식-업종섹터", "주식-규모"], "means": [98.54, 82.1, 102.15, 108.93], "stds": [66.96, 61.04, 83.22, 53.3], "ns": [170, 145, 272, 14]}, "hist_채권": {"labels": ["0.0~2.1", "2.1~4.2", "4.2~6.3", "6.3~8.3", "8.3~10.4", "10.4~12.5", "12.5~14.6", "14.6~16.7", "16.7~18.8", "18.8~20.8", "20.8~22.9", "22.9~25.0"], "counts": [69, 20, 17, 8, 3, 2, 0, 3, 2, 0, 0, 2], "color": "#10b981"}, "corr_채권": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "rs": [0.0942, -0.1082, 0.0548, -0.0185, -0.0256, -0.0003, -0.1405]}, "r2_채권": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "r2s": [0.0089, 0.0117, 0.003, 0.0003, 0.0007, 0.0, 0.0197]}, "sub_채권": {"groups": ["채권-혼합", "채권-회사채", "채권-국공채"], "means": [2.59, 2.06, 4.98], "stds": [2.37, 1.89, 5.78], "ns": [38, 24, 64]}, "hist_혼합자산": {"labels": ["1.5~10.6", "10.6~19.7", "19.7~28.7", "28.7~37.8", "37.8~46.9", "46.9~55.9", "55.9~65.0", "65.0~74.1", "74.1~83.1", "83.1~92.2", "92.2~101.3", "101.3~110.3"], "counts": [7, 18, 9, 6, 4, 1, 1, 0, 0, 0, 0, 1], "color": "#f59e0b"}, "corr_혼합자산": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "rs": [0.2403, 0.0371, 0.1362, -0.0526, -0.0384, -0.0637, 0.3605]}, "r2_혼합자산": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "r2s": [0.0577, 0.0014, 0.0185, 0.0028, 0.0015, 0.0041, 0.13]}, "hist_부동산": {"labels": ["8.2~10.7", "10.7~13.2", "13.2~15.7", "15.7~18.1", "18.1~20.6", "20.6~23.1", "23.1~25.6", "25.6~28.1", "28.1~30.6", "30.6~33.0", "33.0~35.5", "35.5~38.0"], "counts": [1, 2, 4, 1, 1, 0, 1, 0, 0, 0, 0, 1], "color": "#8b5cf6"}, "corr_부동산": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "rs": [-0.5872, -0.3829, 0.1622, 0.5909, -0.3294, -0.4193, 0.1527]}, "r2_부동산": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "r2s": [0.3448, 0.1466, 0.0263, 0.3492, 0.1085, 0.1758, 0.0233]}, "hist_원자재": {"labels": ["2.3~12.8", "12.8~23.2", "23.2~33.7", "33.7~44.2", "44.2~54.7", "54.7~65.2", "65.2~75.7", "75.7~86.2", "86.2~96.7", "96.7~107.2", "107.2~117.7", "117.7~128.2"], "counts": [2, 1, 2, 0, 4, 2, 0, 0, 2, 0, 0, 1], "color": "#ef4444"}, "corr_원자재": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "rs": [0.2868, 0.4152, 0.191, -0.1277, 0.5229, 0.6308, 0.0264]}, "r2_원자재": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "r2s": [0.0822, 0.1724, 0.0365, 0.0163, 0.2734, 0.3979, 0.0007]}, "sub_원자재": {"groups": ["원자재-금속", "원자재-농산물"], "means": [55.6, 6.92], "stds": [28.98, 6.43], "ns": [9, 3]}, "hist_기타": {"labels": ["0.0~2.9", "2.9~5.8", "5.8~8.7", "8.7~11.6", "11.6~14.5", "14.5~17.4", "17.4~20.3", "20.3~23.2", "23.2~26.1", "26.1~29.0", "29.0~31.9", "31.9~34.8"], "counts": [13, 5, 0, 2, 2, 0, 1, 0, 0, 0, 1, 1], "color": "#94a3b8"}, "corr_기타": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "rs": [0.9467, -0.3965, 0.3032, 0.1738, -0.0912, -0.2994, 0.3443]}, "r2_기타": {"xids": ["X1", "X2", "X3", "X4", "X5", "X6", "X7"], "r2s": [0.8962, 0.1572, 0.092, 0.0302, 0.0083, 0.0896, 0.1186]}, "hist_통화": {"labels": ["2.6~3.3", "3.3~4.0", "4.0~4.7", "4.7~5.3", "5.3~6.0", "6.0~6.7", "6.7~7.4", "7.4~8.0", "8.0~8.7", "8.7~9.4", "9.4~10.1", "10.1~10.8"], "counts": [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], "color": "#64748b"}, "corr_통화": {"xids": [], "rs": []}, "r2_통화": {"xids": [], "r2s": []}, "cross": {"cats": ["주식", "채권", "혼합자산", "부동산", "원자재", "기타", "통화"], "means": [96.45, 3.71, 23.41, 17.21, 50.43, 6.84, 5.4], "stds": [73.6, 4.57, 18.22, 7.94, 35.35, 9.0, 4.63], "colors": ["#3b82f6", "#10b981", "#f59e0b", "#8b5cf6", "#ef4444", "#94a3b8", "#64748b"]}};
 
 
 Chart.defaults.font.family = "'Noto Sans KR', sans-serif";
@@ -3956,193 +3950,6 @@ function barChart(id, labels, data, colors, xLabel='', yLabel='') {
                scales:{x:{title:{display:!!xLabel,text:xLabel}}, y:{title:{display:!!yLabel,text:yLabel}}} }
   });
 }
-
-          }
-        }
-      },
-      scales: {
-        x: {
-          grid: { color: '#f1f5f9' },
-          ticks: { font: { size: 10 }, callback: v => v + '%' }
-        },
-        y: { display: false }
-      }
-    }
-  });
-}
-
-
-// ── 상자 수염 그림 (Canvas 2D) ─────────────────────────
-function drawBoxplot(canvasId, stats, color) {
-  var canvas = document.getElementById(canvasId);
-  if (!canvas) return;
-  var dpr = window.devicePixelRatio || 1;
-  var W = canvas.clientWidth  || canvas.offsetWidth  || 500;
-  var H = canvas.clientHeight || canvas.offsetHeight || 70;
-  canvas.width  = W * dpr;
-  canvas.height = H * dpr;
-  var ctx = canvas.getContext('2d');
-  ctx.scale(dpr, dpr);
-  ctx.clearRect(0, 0, W, H);
-
-  // 레이아웃
-  var padL = 42, padR = 20, padT = 10, padB = 22;
-  var drawW = W - padL - padR;
-  var midY  = padT + (H - padT - padB) / 2;
-  var boxH  = (H - padT - padB) * 0.5;
-
-  // 모든 값 범위 (이상치 포함)
-  var allVals = [stats.min, stats.q1, stats.median, stats.q3, stats.max].concat(stats.outliers);
-  var vMin = Math.min.apply(null, allVals);
-  var vMax = Math.max.apply(null, allVals);
-  var vPad = (vMax - vMin) * 0.08 || 1;
-  vMin -= vPad; vMax += vPad;
-
-  function toX(v) { return padL + (v - vMin) / (vMax - vMin) * drawW; }
-
-  // x축
-  ctx.strokeStyle = '#e2e8f0';
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  ctx.moveTo(padL, H - padB);
-  ctx.lineTo(W - padR, H - padB);
-  ctx.stroke();
-
-  // x축 눈금
-  var nTicks = 5;
-  ctx.fillStyle = '#94a3b8';
-  ctx.font = '10px system-ui, sans-serif';
-  ctx.textAlign = 'center';
-  for (var i = 0; i <= nTicks; i++) {
-    var tv = vMin + (vMax - vMin) * i / nTicks;
-    var tx = padL + drawW * i / nTicks;
-    ctx.beginPath();
-    ctx.moveTo(tx, H - padB);
-    ctx.lineTo(tx, H - padB + 3);
-    ctx.strokeStyle = '#cbd5e1';
-    ctx.stroke();
-    ctx.fillText(tv.toFixed(1) + '%', tx, H - padB + 12);
-  }
-
-  // 수염 (좌)
-  ctx.strokeStyle = color;
-  ctx.lineWidth = 1.5;
-  ctx.beginPath();
-  ctx.moveTo(toX(stats.min), midY);
-  ctx.lineTo(toX(stats.q1),  midY);
-  ctx.stroke();
-  // 수염 캡 (좌)
-  ctx.beginPath();
-  ctx.moveTo(toX(stats.min), midY - boxH*0.35);
-  ctx.lineTo(toX(stats.min), midY + boxH*0.35);
-  ctx.stroke();
-
-  // 수염 (우)
-  ctx.beginPath();
-  ctx.moveTo(toX(stats.q3),  midY);
-  ctx.lineTo(toX(stats.max), midY);
-  ctx.stroke();
-  // 수염 캡 (우)
-  ctx.beginPath();
-  ctx.moveTo(toX(stats.max), midY - boxH*0.35);
-  ctx.lineTo(toX(stats.max), midY + boxH*0.35);
-  ctx.stroke();
-
-  // 박스 (Q1 ~ Q3)
-  ctx.fillStyle = color + '28';
-  ctx.strokeStyle = color;
-  ctx.lineWidth = 1.8;
-  var bx = toX(stats.q1), bw = toX(stats.q3) - toX(stats.q1);
-  ctx.beginPath();
-  ctx.roundRect ? ctx.roundRect(bx, midY - boxH/2, bw, boxH, 3)
-                : ctx.rect(bx, midY - boxH/2, bw, boxH);
-  ctx.fill();
-  ctx.stroke();
-
-  // 중앙선 (median)
-  ctx.strokeStyle = color;
-  ctx.lineWidth = 2.5;
-  ctx.beginPath();
-  ctx.moveTo(toX(stats.median), midY - boxH/2);
-  ctx.lineTo(toX(stats.median), midY + boxH/2);
-  ctx.stroke();
-
-  // 평균 (다이아몬드)
-  var mx = toX(stats.mean), r = 5;
-  ctx.fillStyle = '#ffffff';
-  ctx.strokeStyle = color;
-  ctx.lineWidth = 1.5;
-  ctx.beginPath();
-  ctx.moveTo(mx,   midY - r);
-  ctx.lineTo(mx+r, midY);
-  ctx.lineTo(mx,   midY + r);
-  ctx.lineTo(mx-r, midY);
-  ctx.closePath();
-  ctx.fill();
-  ctx.stroke();
-
-  // 이상치 점
-  ctx.fillStyle = color;
-  stats.outliers.forEach(function(ov) {
-    ctx.beginPath();
-    ctx.arc(toX(ov), midY, 3, 0, Math.PI*2);
-    ctx.fill();
-  });
-
-  // 툴팁
-  canvas._bpStats = stats;
-  canvas._bpColor = color;
-  canvas._bpToX   = toX;
-  canvas._bpMidY  = midY;
-  canvas._bpBoxH  = boxH;
-  canvas._bpVMin  = vMin;
-  canvas._bpVMax  = vMax;
-  canvas._bpPadL  = padL;
-  canvas._bpDrawW = drawW;
-
-  canvas.onmousemove = function(e) {
-    var rect = canvas.getBoundingClientRect();
-    var mx2 = e.clientX - rect.left;
-    var val = canvas._bpVMin + (mx2 - canvas._bpPadL) / canvas._bpDrawW * (canvas._bpVMax - canvas._bpVMin);
-    var s = canvas._bpStats;
-    var tip = document.getElementById('bp-tooltip');
-    if (!tip) {
-      tip = document.createElement('div');
-      tip.id = 'bp-tooltip';
-      tip.style.cssText = 'position:fixed;background:#1e293b;color:#fff;padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.7;pointer-events:none;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,.3);';
-      document.body.appendChild(tip);
-    }
-    tip.innerHTML =
-      '<b>수익률_1Y 분포 (n=' + s.n + ')</b><br>' +
-      '최솟값: <b>' + s.min  + '%</b><br>' +
-      'Q1 (25%): <b>' + s.q1  + '%</b><br>' +
-      '중앙값: <b>' + s.median + '%</b><br>' +
-      '평균 ◇: <b>' + s.mean  + '%</b><br>' +
-      'Q3 (75%): <b>' + s.q3  + '%</b><br>' +
-      '최댓값: <b>' + s.max  + '%</b><br>' +
-      '이상치: <b>' + s.outliers.length + '개</b>';
-    tip.style.display = 'block';
-    tip.style.left = (e.clientX + 14) + 'px';
-    tip.style.top  = (e.clientY - 10) + 'px';
-  };
-  canvas.onmouseleave = function() {
-    var tip = document.getElementById('bp-tooltip');
-    if (tip) tip.style.display = 'none';
-  };
-}
-
-// 탭 전환 시 박스플롯 재렌더 (display:none → block 후 크기 확정)
-function redrawBoxplots() {
-  var BP_COLORS = {
-    '주식':'#3b82f6','체권':'#10b981','혼합자산':'#f59e0b',
-    '원자재':'#ef4444','부동산':'#8b5cf6','기타':'#94a3b8'
-  };
-  Object.keys(BP_COLORS).forEach(function(cat) {
-    var key = 'box_' + cat;
-    if (CD[key]) drawBoxplot(key, CD[key], BP_COLORS[cat]);
-  });
-}
-
 function histChart(id, hist, color) {
   const ctx = document.getElementById(id);
   if (!ctx) return;
@@ -4194,12 +4001,6 @@ barChart('corr_원자재', CD['corr_원자재'].xids, CD['corr_원자재'].rs, C
 barChart('r2_원자재', CD['r2_원자재'].xids, CD['r2_원자재'].r2s, '#ef4444', '변수', 'R²');
 
 histChart('hist_기타', CD['hist_기타'], '#94a3b8');
-drawBoxplot('box_주식', CD['box_주식'], '#3b82f6');
-drawBoxplot('box_채권', CD['box_채권'], '#10b981');
-drawBoxplot('box_혼합자산', CD['box_혼합자산'], '#f59e0b');
-drawBoxplot('box_원자재', CD['box_원자재'], '#ef4444');
-drawBoxplot('box_부동산', CD['box_부동산'], '#8b5cf6');
-drawBoxplot('box_기타', CD['box_기타'], '#94a3b8');
 
 barChart('corr_기타', CD['corr_기타'].xids, CD['corr_기타'].rs, CD['corr_기타'].rs.map(v=>v>=0?'#3b82f6':'#ef4444'), '변수', 'r값');
 
@@ -4243,7 +4044,7 @@ document.querySelectorAll('.tabs').forEach(tabGroup => {
       const section = tabGroup.closest('section');
       section.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
       const panel = document.getElementById(target);
-      if (panel) { panel.classList.add('active'); setTimeout(redrawBoxplots, 30); }
+      if (panel) panel.classList.add('active');
     });
   });
 });
@@ -4372,49 +4173,6 @@ function downloadExcel(tid, filename) {
   XLSX.utils.book_append_sheet(wb, ws, filename.replace('.xlsx','').slice(0,31));
   XLSX.writeFile(wb, filename);
 }
-</script>
-
-
-<script>
-// ── 탭 전환 핸들러 ────────────────────────────────────
-(function() {
-  function activateTab(btn) {
-    var tabsEl = btn.closest('[data-tabs]');
-    if (!tabsEl) return;
-
-    // 버튼 active 전환
-    tabsEl.querySelectorAll('.tab-btn').forEach(function(b) {
-      b.classList.remove('active');
-    });
-    btn.classList.add('active');
-
-    // 패널 active 전환 (같은 section 내에서만)
-    var section = tabsEl.closest('section') || tabsEl.parentElement;
-    var target  = btn.getAttribute('data-target');
-    section.querySelectorAll('.tab-panel').forEach(function(p) {
-      p.classList.remove('active');
-    });
-    var panel = document.getElementById(target);
-    if (panel) {
-      panel.classList.add('active');
-      setTimeout(redrawBoxplots, 30);
-      // display:none 에서 초기화된 Chart 강제 resize
-      panel.querySelectorAll('canvas').forEach(function(c) {
-        if (c._chart) { c._chart.resize(); c._chart.update(); }
-        if (Chart && Chart.instances) {
-          Object.values(Chart.instances).forEach(function(ch) {
-            if (ch.canvas === c) { ch.resize(); ch.update(); }
-          });
-        }
-      });
-    }
-  }
-
-  document.addEventListener('click', function(e) {
-    var btn = e.target.closest('.tab-btn');
-    if (btn) activateTab(btn);
-  });
-})();
 </script>
 
 </body>

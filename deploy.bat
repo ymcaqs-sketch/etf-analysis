@@ -1,15 +1,15 @@
 @echo off
 chcp 65001 >nul
 echo.
-echo ┌─────────────────────────────────────────────┐
-echo │   dev/index.html → index.html 배포          │
+echo ┌─────────────────────────────────────────────────┐
+echo │   리얼 배포: dev → deploy 브랜치               │
 echo │   https://ymcaqs-sketch.github.io/etf-analysis/ │
-echo └─────────────────────────────────────────────┘
+echo └─────────────────────────────────────────────────┘
 echo.
 
 cd /d "%~dp0"
 
-:: 현재 브랜치 확인
+:: dev 브랜치 확인
 for /f "tokens=*" %%b in ('git rev-parse --abbrev-ref HEAD') do set BRANCH=%%b
 if not "%BRANCH%"=="dev" (
     echo [오류] dev 브랜치에서만 실행 가능합니다. 현재: %BRANCH%
@@ -24,12 +24,12 @@ if errorlevel 1 (
     pause & exit /b 1
 )
 
-:: main으로 전환
-echo [1/4] main 브랜치로 전환...
-git checkout main
+:: deploy 브랜치로 전환
+echo [1/4] deploy 브랜치 전환...
+git checkout deploy
 
-:: dev/index.html → main 반영 (GitHub Pages /dev/ 경로 유지)
-echo [2/4] dev/index.html → main 동기화...
+:: dev/index.html → deploy 동기화 (GitHub Pages /dev/ 경로)
+echo [2/4] dev/ 경로 동기화...
 git checkout dev -- dev/
 git add dev/index.html
 
@@ -46,8 +46,8 @@ if errorlevel 1 (
     echo     변경사항 없음, 커밋 스킵
 )
 
-echo [4/4] GitHub Pages 배포...
-git push origin main
+echo [4/4] GitHub Pages 배포 (push deploy)...
+git push origin deploy
 
 :: dev로 복귀
 git checkout dev

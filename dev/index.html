@@ -4133,8 +4133,10 @@ function drawBoxplot(canvasId, stats, color) {
 
 // 탭 전환 시 박스플롯 재렌더 (display:none → block 후 크기 확정)
 function redrawBoxplots() {
-  {"주식": "#3b82f6", "채권": "#10b981", "혼합자산": "#f59e0b", "원자재": "#ef4444", "부동산": "#8b5cf6", "기타": "#94a3b8"}.split;
-  var BP_COLORS = {"주식": "#3b82f6", "채권": "#10b981", "혼합자산": "#f59e0b", "원자재": "#ef4444", "부동산": "#8b5cf6", "기타": "#94a3b8"};
+  var BP_COLORS = {
+    '주식':'#3b82f6','체권':'#10b981','혼합자산':'#f59e0b',
+    '원자재':'#ef4444','부동산':'#8b5cf6','기타':'#94a3b8'
+  };
   Object.keys(BP_COLORS).forEach(function(cat) {
     var key = 'box_' + cat;
     if (CD[key]) drawBoxplot(key, CD[key], BP_COLORS[cat]);

@@ -4241,7 +4241,7 @@ document.querySelectorAll('.tabs').forEach(tabGroup => {
       const section = tabGroup.closest('section');
       section.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
       const panel = document.getElementById(target);
-      if (panel) panel.classList.add('active');
+      if (panel) { panel.classList.add('active'); setTimeout(redrawBoxplots, 30); }
     });
   });
 });
@@ -4395,6 +4395,7 @@ function downloadExcel(tid, filename) {
     var panel = document.getElementById(target);
     if (panel) {
       panel.classList.add('active');
+      setTimeout(redrawBoxplots, 30);
       // display:none 에서 초기화된 Chart 강제 resize
       panel.querySelectorAll('canvas').forEach(function(c) {
         if (c._chart) { c._chart.resize(); c._chart.update(); }
